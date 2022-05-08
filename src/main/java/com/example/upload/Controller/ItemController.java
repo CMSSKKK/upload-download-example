@@ -84,4 +84,21 @@ public class ItemController {
                 .header(HttpHeaders.CONTENT_DISPOSITION, contentDisposition)
                 .body(urlResource);
     }
+    @GetMapping("/test/download2")
+    public String page() throws MalformedURLException {
+        return "test";
+    }
+
+    @GetMapping("/test/download")
+    public ResponseEntity<Resource> downloadAttach() throws MalformedURLException {
+        String image = "https://mybucket-jun33.s3.ap-northeast-2.amazonaws.com/f17e6927-1d5e-444a-b88d-b9127de2495d.png";
+        UrlResource urlResource = new UrlResource(image);
+
+
+        String contentDisposition = "attachment; filename=\"" + "test" + "\"";
+
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, contentDisposition)
+                .body(urlResource);
+    }
 }

@@ -16,6 +16,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+//    implementation 'mysql:mysql-connector-java:8.0.27'
+//    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-aws
+//    implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.5.RELEASE'
 }
 
 tasks.named('test') {
